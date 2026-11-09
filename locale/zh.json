@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Playwright 浏览器连接",
+    "description": "通过 Microsoft Playwright MCP 和 Chrome 扩展，让智能体直接操作你已登录的浏览器标签页。"
+  }
+}

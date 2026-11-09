@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Playwright browser connection",
+    "description": "Connects Microsoft Playwright MCP through the Chrome extension so agents can drive your existing logged-in browser tabs."
+  }
+}
