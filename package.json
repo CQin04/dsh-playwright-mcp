@@ -1,0 +1,35 @@
+{
+  "name": "@local/dsh-playwright-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright MCP with the Chrome extension for DeepSeek Harness: drives the user's existing browser tabs through @playwright/mcp --extension.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "playwright",
+    "mcp",
+    "browser-automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CQin04/dsh-playwright-mcp.git"
+  },
+  "homepage": "https://github.com/CQin04/dsh-playwright-mcp",
+  "exports": {
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

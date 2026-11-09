@@ -1,0 +1,29 @@
+# Playwright MCP through the in-box @deepseek-ai/dsh-mcp-client bridge,
+# connected to the already-installed Playwright Chrome extension.
+#
+# Extension mode drives the tabs of the user's running Chrome (logged-in
+# sessions, cookies, installed extensions) instead of launching a fresh browser.
+#
+# 1. Install the "Playwright Extension" in Chrome.
+# 2. Open the extension's status/connection page and copy the value of
+#    PLAYWRIGHT_MCP_EXTENSION_TOKEN.
+# 3. Replace REPLACE_WITH_YOUR_EXTENSION_TOKEN below with that value.
+#    Never commit your real token to a public repository.
+#
+# The token bypasses the extension's per-connection approval dialog.
+#
+# Windows note: bare `npx` cannot be spawned directly (it is npx.cmd), so the
+# command goes through cmd.exe /c. On macOS/Linux use command: npx with the
+# same args instead.
+- insert:
+    - id: mcp-playwright
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: playwright
+        transport: stdio
+        command: cmd.exe
+        args: ['/c', 'npx', '-y', '@playwright/mcp@latest', '--extension']
+        env:
+          PLAYWRIGHT_MCP_EXTENSION_TOKEN: REPLACE_WITH_YOUR_EXTENSION_TOKEN
+        toolCallTimeoutMs: 120000
+        failOnStartupError: false
