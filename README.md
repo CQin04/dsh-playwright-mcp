@@ -1,5 +1,8 @@
 # dsh-playwright-mcp
 
+[DSH 插件导航：插件集合、Playwright MCP、使用计时](https://github.com/CQin04/awesome-dsh-plugin/blob/main/NAVIGATION.md)
+
+
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）的**配置型插件**：把 Microsoft 官方 [`@playwright/mcp`](https://github.com/microsoft/playwright-mcp) 以 **Chrome 扩展模式（`--extension`）** 接入 DSH，让智能体直接操作你已登录的 Chrome 标签页——不另开浏览器、不丢登录态、不发账号密码。
 
 A configuration-only DSH bundle that connects Microsoft's official `@playwright/mcp` to your running Chrome through the Playwright browser extension.
